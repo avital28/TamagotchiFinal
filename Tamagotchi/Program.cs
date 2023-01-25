@@ -13,7 +13,7 @@ namespace Tamagotchi
     {
         static void Main(string[] args)
         {
-            
+            //start the app
             MainUi app = new MainUi(new WelcomeScreen());
             app.Start();
             Console.ReadKey();
