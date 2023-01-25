@@ -50,6 +50,7 @@
     <Compile Include="Interfaces\IAnimalDetails.cs" />
     <Compile Include="UI\5. AnimalMenu\AnimalActionsScreen.cs" />
     <Compile Include="UI\5. AnimalMenu\ActivityArchiveScreen.cs" />
+    <Compile Include="UI\6. Activities\Cleaning\Cleansing.cs" />
     <Compile Include="UI\6. Activities\Cleaning\CleaningKinds\FaceWash.cs" />
     <Compile Include="UI\6. Activities\Cleaning\CleaningKinds\Shower.cs" />
     <Compile Include="UI\6. Activities\Cleaning\CleaningMenu.cs" />
@@ -59,7 +60,7 @@
     <Compile Include="UI\6. Activities\Feeding\FeedingScreen.cs" />
     <Compile Include="UI\6. Activities\Feeding\Food.cs" />
     <Compile Include="UI\6. Activities\Feeding\FoodKinds\Pizza.cs" />
-    <Compile Include="UI\6. Activities\Feeding\FoodKinds\Rice.cs" />
+    <Compile Include="UI\6. Activities\Feeding\FoodKinds\Grapes.cs" />
     <Compile Include="App\MainUi.cs" />
     <Compile Include="Data\Data.cs" />
     <Compile Include="Events\HungerAlert.cs" />
@@ -83,12 +84,13 @@
     <Compile Include="UI\5. AnimalMenu\AnimalActionsMenu.cs" />
     <Compile Include="UI\5. AnimalMenu\ChangeAnimalDetails.cs" />
     <Compile Include="UI\5. AnimalMenu\ViewAnimalDetails.cs" />
-    <Compile Include="UI\6. Activities\playing\Games\Ball.cs" />
-    <Compile Include="UI\6. Activities\playing\Games\Games.cs" />
-    <Compile Include="UI\6. Activities\playing\Games\Jumpingrope.cs" />
-    <Compile Include="UI\6. Activities\playing\Games\PingPong.cs" />
-    <Compile Include="UI\6. Activities\playing\PlayingMenu.cs" />
-    <Compile Include="UI\6. Activities\playing\PlayingScreen.cs" />
+    <Compile Include="UI\6. Activities\Cleaning\CleaningKinds\SkinCare.cs" />
+    <Compile Include="UI\6. Activities\Playing\Games\Ball.cs" />
+    <Compile Include="UI\6. Activities\Playing\Games\Games.cs" />
+    <Compile Include="UI\6. Activities\Playing\Games\Jumpingrope.cs" />
+    <Compile Include="UI\6. Activities\Playing\Games\PingPong.cs" />
+    <Compile Include="UI\6. Activities\Playing\PlayingMenu.cs" />
+    <Compile Include="UI\6. Activities\Playing\PlayingScreen.cs" />
     <Compile Include="UI\6. Activities\ActivityScreen.cs" />
     <Compile Include="UI\6. Activities\ActivityMenu.cs" />
     <Compile Include="UI\1. RegisterLogin\LoginScreen.cs" />

@@ -21,7 +21,7 @@ namespace Tamagotchi.UI
             base.Show();
 
             Console.CursorVisible = false;
-            Console.ForegroundColor = ConsoleColor.DarkMagenta;
+            Console.ForegroundColor = ConsoleColor.Magenta;
             Console.Write(@"
 ╦ ╦┌─┐┬  ┌─┐┌─┐┌┬┐┌─┐  ┌┬┐┌─┐   ┌┬┐┬ ┬┌─┐                  __O__
 ║║║├┤ │  │  │ ││││├┤    │ │ │    │ ├─┤├┤                  '     '

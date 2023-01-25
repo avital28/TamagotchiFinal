@@ -18,7 +18,9 @@ namespace Tamagotchi.UI
         public virtual void Show()
         {
             Console.Clear();
-            Console.WriteLine($" {title,65}");
+            Console.ForegroundColor = ConsoleColor.Magenta;
+            Console.WriteLine($" {title,67}");
+            Console.ResetColor();
         }
     }
 }

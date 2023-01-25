@@ -11,17 +11,31 @@ namespace Tamagotchi.Actions
     {
         public Cookie() 
         {
-            calories = 300;
             hungerlevelaffect= 1;   
         }
         public void Feed() 
-        { Console.WriteLine("well fed"); 
+        {
+          Console.ForegroundColor = ConsoleColor.Blue;
+          Console.WriteLine(@"
+                                 __   ___   ____   ____                    _  _
+                                 \ \ / / | | |  \/   | |                 _/0\/ \_
+                                  \ V /| | | | .  .  | |        .-.   .-` \_/\0/ '-.
+                                   \ / | | | | |\/|  | |       /:::\ / ,_________,  \
+                                   | | | |_| | |  |  |_|      /\:::/ \  '. (:::/  `'-;
+                                   \_/  \___/\_|  |_ (_)      \ `-'`\ '._ `""'""'\__ \
+                                                               `'-.  \   `)-=-=(  `,  |
+                                                                   \  `-""`     `""-`/
+                      
+                      
+");
 
           MainUi.activitiesHistory.Add(new Activity(MainUi.p.Username, MainUi.a.Animalname, "feeding", "cookie", MainUi.a.Age, MainUi.a.LifeCycle));
-            MainUi.a.HungerLevel -= hungerlevelaffect;
-            if(MainUi.a.HungerLevel<0)
-             MainUi.a.HungerLevel = 0;
-            Back();
+          MainUi.a.HungerLevel -= hungerlevelaffect;
+          if(MainUi.a.HungerLevel<0)
+          MainUi.a.HungerLevel = 0;
+            MainUi.a.Weight += 3;
+          Console.WriteLine("");
+          Back();
         }
 
     }

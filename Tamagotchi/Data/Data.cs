@@ -4,6 +4,7 @@ using System.Globalization;
 using System.Linq;
 using System.Reflection;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Xml.Linq;
 using Tamagotchi.Actions;
@@ -19,14 +20,14 @@ namespace Tamagotchi.Data
         {
             DateTime b1 = Convert.ToDateTime("12/1/2006");
             playerlist.Add(new Player("Yali", "Eldar", "Yali12", "123", "female", b1));
-            DateTime b2 = DateTime.ParseExact("20/5/1976", "dd/M/yyyy", CultureInfo.InvariantCulture);
+            DateTime b2 = DateTime.ParseExact("20/5/1976", "d/M/yyyy", CultureInfo.InvariantCulture);
             playerlist.Add(new Player("Tal", "Simon", "Talsi", "abc", "male", b2));
         }
 
         public static void AddAnimal()
         {
-            animallist.Add(new Animal("Kitty", "Yali12", 0, "healthy"));
-            animallist.Add(new Animal("oliver", "Talsi", 0, "healthy"));
+            animallist.Add(new Animal("Kitty", "Yali12", 3));
+            animallist.Add(new Animal("oliver", "Talsi", 5));
         }
 
         public static Player Login(string username, string password)
@@ -49,13 +50,18 @@ namespace Tamagotchi.Data
             }
             else
             {
+                Console.WriteLine();
                 Console.WriteLine("This username is already taken, please choose a different one");
-                Console.WriteLine("press any key to go back to the registration screen");
-                Console.ReadKey();
+                Thread.Sleep(3000);
+                Console.Clear();
                 Screen next = new RegisterScreen();
                 next.Show();
             }
+        }
 
+        public static void CreateAnimal(Animal a)
+        {
+            animallist.Add(a);
         }
     }
 }

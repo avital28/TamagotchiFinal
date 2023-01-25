@@ -12,9 +12,10 @@ namespace Tamagotchi.UI._1
         public ChangeDetailsScreen() : base("") { }
         public void Details()
         {
-            Console.WriteLine("Please enter the serial number of the player detail you would like to change");
+            Console.ForegroundColor = ConsoleColor.Magenta;
+            Console.WriteLine("Current player details:"); 
+            Console.ResetColor();
             string gender = MainUi.p.Gender;
-            Console.WriteLine("Current player details:");
             Console.WriteLine("1- First name: " + MainUi.p.Firstname);
             Console.WriteLine("2- Last name: " + MainUi.p.Lastname);
             Console.WriteLine("3- Username: " + MainUi.p.Username);
@@ -23,6 +24,7 @@ namespace Tamagotchi.UI._1
             Console.WriteLine("6- Gender: " + gender[0].ToString().ToUpper() + gender.Substring(1));
             Console.WriteLine();
             Console.WriteLine();
+            Console.WriteLine("Choose the number of the detail you would like to change");
             int choice = int.Parse(Console.ReadLine());
             while (choice>=6 && choice<=0)
             {
@@ -35,10 +37,26 @@ namespace Tamagotchi.UI._1
             switch (choice)
             {
                 case 1:
-                    MainUi.p.Firstname= newvalue;
+                    try
+                    {
+                        MainUi.p.Firstname = newvalue;
+                    }
+                    catch (Exception e)
+                    {
+                        Console.WriteLine(e.Message);
+                        newvalue = Console.ReadLine();
+                    }                  
                     break;
                 case 2:
-                    MainUi.p.Lastname = newvalue;
+                    try
+                    {
+                        MainUi.p.Lastname = newvalue;
+
+                    }
+                    catch (Exception e)
+                    {
+                        Console.WriteLine(e.Message);
+                    }
                     break;
                 case 3:
                     MainUi.p.Username = newvalue;
@@ -54,35 +72,11 @@ namespace Tamagotchi.UI._1
                     MainUi.p.Gender = newvalue;
                     break;
             }
-            Console.WriteLine("Your details have been sucssesfully updated, press any key to go back to the player menu");
+            Console.WriteLine("Your details have been sucssesfully updated, press any key to go back to the Player / Animal menu");
             Console.ReadKey();
             Screen next2 = new PlayerDetailsMenu();
             next2.Show();
-        }
-
-
-
-
-
-
-
-        //Console.WriteLine("Current player details:");
-        //Dictionary<string, string> PlayerDetails = new Dictionary<string, string>();
-        //PlayerDetails.Add("1" , "Firstname");
-        //PlayerDetails.Add("2" ,"Lastname" );
-        //PlayerDetails.Add("3" ,"Username" );
-        //PlayerDetails.Add("4",  "Password" );
-        //PlayerDetails.Add("5" ,"Birthday");
-        //PlayerDetails.Add("6", "Gender");
-        //string[] currentdetails = { MainUi.p.Firstname, MainUi.p.Lastname, MainUi.p.Username, MainUi.p.Password, MainUi.p.Birthday.ToString(), MainUi.p.Gender };
-        //for (int i = 0; i < PlayerDetails.Count; i++)
-        //{
-        //    Console.WriteLine(PlayerDetails.ElementAt(i).Key + " - " + PlayerDetails.ElementAt(i).Value + ": "+ currentdetails[i]);
-        //}
-
-        //int choice = int.Parse(Console.ReadLine());
-        //string t = PlayerDetails.ElementAt(choice).Value;
-        //MainUi.p.t
+}
 
     }
 

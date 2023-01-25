@@ -11,11 +11,11 @@ namespace Tamagotchi.Actions
     public class FeedingMenu :MenuScreen, IAction
     {
         public void Act() { }
-        public FeedingMenu (): base ("feeding menu")
+        public FeedingMenu (): base ("Food menu")
         {
-            AddItem("Cookie", new FeedingScreen(new Cookie(), "cookie"));
-            AddItem("Rice", new FeedingScreen(new Rice(), "rice"));
-            AddItem("Pizza", new FeedingScreen(new Pizza(), "pizza"));
+            AddItem("Grapes", new FeedingScreen(new Grapes(), ""));
+            AddItem("Cookie", new FeedingScreen(new Cookie(), ""));
+            AddItem("Pizza", new FeedingScreen(new Pizza(), ""));
         }
         
     }

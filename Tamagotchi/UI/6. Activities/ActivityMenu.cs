@@ -11,7 +11,7 @@ namespace Tamagotchi.UI
 {
     public class ActivityMenu :MenuScreen
     {
-        public ActivityMenu() : base("actions screen")
+        public ActivityMenu() : base("Activities menu")
         {
             AddItem("Feeding", new FeedingMenu());
             AddItem("Cleaning", new CleaningMenu());

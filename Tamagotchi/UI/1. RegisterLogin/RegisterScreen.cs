@@ -48,7 +48,6 @@ namespace Tamagotchi.UI
             catch (Exception e)
             {
                 Console.WriteLine(e.Message);
-                Console.WriteLine("Please re-enter your first name");
                 firstname = Console.ReadLine();
             }
             Console.WriteLine("Enter your last name");
@@ -63,8 +62,8 @@ namespace Tamagotchi.UI
             }
             Console.WriteLine("enter your gender");
             string gender = Console.ReadLine();
-            Console.WriteLine("Please enter your birthday");
-            birthday = DateTime.ParseExact(Console.ReadLine(), "dd/M/yyyy", CultureInfo.InvariantCulture);
+            Console.WriteLine("Please enter your birthday, make sure to use d/m/yyyy format (e.g 18/1/2004)");
+            birthday = DateTime.ParseExact(Console.ReadLine(), "d/M/yyyy", CultureInfo.InvariantCulture);
             Player c= new Player(firstname,lastname,username,password,gender,birthday);
             Data.Data.Register(c);
 

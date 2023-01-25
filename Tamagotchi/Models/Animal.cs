@@ -11,6 +11,7 @@ namespace Tamagotchi
     {
         
         public event EventHandler<EventArgs> IsHungry;
+        public event EventHandler<EventArgs> IsAging;
 
         public string Animalname { get; set; }
         public string Owner { get; set; }   
@@ -24,9 +25,11 @@ namespace Tamagotchi
         public int CleanlinessLevel { get; set; }
         public int SerialNumber{ get; set; }
 
+        public bool IsAlive;
+
         public static int count = Data.Data.animallist.Count+1;
         public Animal() { }
-        public Animal (string animalname, string owner, int weight, string healthStatus)
+        public Animal (string animalname, string owner, int weight)
         {
             Animalname = animalname;
             Owner = owner;
@@ -35,15 +38,24 @@ namespace Tamagotchi
             AnimalBirthday = DateTime.Now;
             LifeCycle = "Baby";
             HealthStatus = "Healthy";
+            IsAlive = true;
             SerialNumber = count;
             count++;
         }
 
-        public void Start()
+        public void StartHunger()
         {
             IsHungry += HungerAlert.PrintAlert;
             IsHungry.Invoke(MainUi.a, new EventArgs());
         }
+
+        public void StartAging()
+        {
+            IsAging += AgeChange.ChangeAnimalsAge;
+            IsAging.Invoke(MainUi.a, new EventArgs());
+        }
+
+        
 
 
 

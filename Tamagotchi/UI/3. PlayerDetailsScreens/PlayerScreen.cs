@@ -8,7 +8,7 @@ using Tamagotchi.UI._1;
 
 namespace Tamagotchi.UI
 {
-    public class PlayerScreen : Screen, IPlayerAnimal, Idetails
+    public class PlayerScreen : Screen, IPlayerAnimal
     {
         private Idetails details;
         public PlayerScreen() :base (" ") { }
@@ -17,7 +17,6 @@ namespace Tamagotchi.UI
             details = a;
 
         }
-        public void Details() { }
         public void PlayerAnimal()
         {
             base.Show();

@@ -12,11 +12,20 @@ namespace Tamagotchi.Events
     {
         public static async void ChangeAnimalsAge(object sender, EventArgs a)
         {
-            if (sender is Animal)
+            while (MainUi.a.IsAlive == true)
             {
-                await Task.Delay(10000);
+                await Task.Delay(80000);
                 MainUi.a.Age++;
+                if (MainUi.a.Age == 5)
+                    MainUi.a.LifeCycle = "Child";
+                else if (MainUi.a.Age == 12)
+                    MainUi.a.LifeCycle = "Teen";
+                else if (MainUi.a.Age == 20)
+                    MainUi.a.LifeCycle = "Adult";
+                else if (MainUi.a.Age == 70)
+                    MainUi.a.LifeCycle = "Elder";
             }
+            
         }
     }
 }

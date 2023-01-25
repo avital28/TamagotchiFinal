@@ -10,10 +10,10 @@ namespace Tamagotchi.UI
 {
     public class PlayerAnimalMenu: MenuScreen
     {
-        public PlayerAnimalMenu() : base ("player - animal menu")
+        public PlayerAnimalMenu() : base ("Player / Animal Menu")
         {
-            AddItem("change / view player details", new PlayerAnimalScreen(new PlayerScreen(), "player details"));
-            AddItem("main menu animal", new PlayerAnimalScreen(new AnimalScreen(), "animal"));
+            AddItem("Player details", new PlayerAnimalScreen(new PlayerScreen(), "player details"));
+            AddItem("Animal menu", new PlayerAnimalScreen(new AnimalScreen(), "animal"));
 
         }
     }

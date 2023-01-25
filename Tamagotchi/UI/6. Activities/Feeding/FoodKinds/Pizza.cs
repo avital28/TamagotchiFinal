@@ -11,10 +11,30 @@ namespace Tamagotchi.Actions
     {
         public Pizza() 
         {
-            calories = 450;
             hungerlevelaffect = 3;
         }
-        public void Feed() { Console.WriteLine("well fed"); MainUi.activitiesHistory.Add(new Activity(MainUi.p.Username, MainUi.a.Animalname, "feeding", "Pizza", MainUi.a.Age, MainUi.a.LifeCycle)); Back(); }
+        public void Feed() 
+        {
+            Console.ForegroundColor = ConsoleColor.DarkYellow;
+          Console.WriteLine(@" 
+                                 __   ___   ____   ____                   _....._
+                                 \ \ / / | | |  \/   | |              _.:`.--|--.`:._  
+                                  \ V /| | | | .  .  | |            .: .'\o  | o /'. '.
+                                   \ / | | | | |\/|  | |           // '.  \ o|  /  o '.\
+                                   | | | |_| | |  |  |_|          //'._o'. \ |o/ o_.-'o\\
+                                   \_/  \___/\_|  |_ (_)          || o '-.'.\|/.-' o   ||
+                                                                  ||--o--o-->|");
+
+            Console.ResetColor();
+          MainUi.activitiesHistory.Add(new Activity(MainUi.p.Username, MainUi.a.Animalname, "feeding", "Pizza", MainUi.a.Age, MainUi.a.LifeCycle));
+            MainUi.a.HungerLevel -= hungerlevelaffect;
+            if (MainUi.a.HungerLevel < 0)
+                MainUi.a.HungerLevel = 0;
+            MainUi.a.Weight += 4;
+            Console.WriteLine("");
+            Back();
+
+        }
 
     }
 }

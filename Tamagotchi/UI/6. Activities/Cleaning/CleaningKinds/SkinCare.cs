@@ -6,16 +6,16 @@ using System.Threading;
 using System.Threading.Tasks;
 using Tamagotchi.Actions;
 using Tamagotchi.Interfaces;
+using Tamagotchi.UI._6._Activities.Cleaning.CleaningKinds;
 
-namespace Tamagotchi.UI._6._Activities.Cleaning.CleaningKinds
+namespace Tamagotchi.UI._6._Activities.Feeding.FoodKinds
 {
-    public class FaceWash:Cleansing, IClean
+    public class SkinCare: Cleansing, IClean
     {
-        public FaceWash() 
+        public SkinCare() 
         {
-            cleanlinesslevelaffect = 2;
+            cleanlinesslevelaffect = 1;
         }
-
         public void Clean()
         {
             Console.WriteLine("Your animal has been cleaned");
@@ -24,6 +24,8 @@ namespace Tamagotchi.UI._6._Activities.Cleaning.CleaningKinds
             if (MainUi.a.CleanlinessLevel > 5)
                 MainUi.a.CleanlinessLevel = 5;
             Back();
+
+
         }
     }
 }

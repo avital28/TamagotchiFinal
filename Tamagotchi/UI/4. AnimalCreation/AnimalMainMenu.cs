@@ -8,10 +8,10 @@ namespace Tamagotchi.UI._4._AnimalCreation
 {
     public class AnimalMainMenu:MenuScreen
     {
-        public AnimalMainMenu() : base ("animal main menu")
+        public AnimalMainMenu() : base ("Main animal menu")
         {
-            AddItem("register", new AnimalCreationScreen());
-            AddItem("login", new AnimalLoginScreen());
+            AddItem("Create new animal", new AnimalCreationScreen());
+            AddItem("Login with existing animal", new AnimalLoginScreen());
         }
     }
 }

@@ -4,14 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
-using Tamagotchi.UI;
+using Tamagotchi.Actions;
 using Tamagotchi.UI._5._AnimalMenu;
 
-namespace Tamagotchi.Actions
+namespace Tamagotchi.UI._6._Activities.Cleaning.CleaningKinds
 {
-    public class Food : ActivityArchiveScreen
+    public class Cleansing:ActivityArchiveScreen
     {
-        protected int hungerlevelaffect;
+        protected int cleanlinesslevelaffect;
 
         public void Back()
         {
