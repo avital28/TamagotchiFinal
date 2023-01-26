@@ -26,7 +26,7 @@ namespace Tamagotchi.Actions
                                                                   ||--o--o-->|");
 
             Console.ResetColor();
-          MainUi.activitiesHistory.Add(new Activity(MainUi.p.Username, MainUi.a.Animalname, "feeding", "Pizza", MainUi.a.Age, MainUi.a.LifeCycle));
+          MainUi.activitiesHistory.Add(new Activity(MainUi.p.Username, MainUi.a.Animalname, "Feeding", "Pizza", MainUi.a.Age, MainUi.a.LifeCycle));
             MainUi.a.HungerLevel -= hungerlevelaffect;
             if (MainUi.a.HungerLevel < 0)
                 MainUi.a.HungerLevel = 0;

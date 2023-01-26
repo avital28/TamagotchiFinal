@@ -12,9 +12,9 @@ namespace Tamagotchi.UI._6._Activities.Cleaning
     {
         public CleaningMenu() : base ("Cleaning menu")
         {
-            AddItem("Shower", new CleaningScreen(new Shower(), "Shower"));
-            AddItem("Face wash", new CleaningScreen(new FaceWash(), "Face wash"));
-            AddItem("Skincare", new CleaningScreen(new SkinCare(), "Skincare"));
+            AddItem("Shower", new CleaningScreen(new Shower(), ""));
+            AddItem("Face wash", new CleaningScreen(new FaceWash(), ""));
+            AddItem("Skincare", new CleaningScreen(new SkinCare(), ""));
 
         }
     }

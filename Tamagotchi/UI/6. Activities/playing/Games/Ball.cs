@@ -30,7 +30,7 @@ namespace Tamagotchi.UI._6._Activities.playing.Games
                                                             
 ");
             Console.ResetColor();
-          MainUi.activitiesHistory.Add(new Activity(MainUi.p.Username, MainUi.a.Animalname, "playing", "ball", MainUi.a.Age, MainUi.a.LifeCycle));
+          MainUi.activitiesHistory.Add(new Activity(MainUi.p.Username, MainUi.a.Animalname, "Playing", "ball", MainUi.a.Age, MainUi.a.LifeCycle));
           MainUi.a.HappinessLevel += happinesslevelaffect;
             if (MainUi.a.HappinessLevel >5)
                 MainUi.a.HappinessLevel = 5;

@@ -16,6 +16,8 @@ namespace Tamagotchi.Actions
 
         public override void Show()
         {
+            base.Show();
+            Console.WriteLine();
             Console.Clear();
             IEnumerable<Activity> currentanimalactivities = from n in MainUi.activitiesHistory where n.AnimalName==MainUi.a.Animalname select n;
             Console.ForegroundColor = ConsoleColor.Magenta;

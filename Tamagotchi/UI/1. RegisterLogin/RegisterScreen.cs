@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace Tamagotchi.UI
@@ -24,6 +25,7 @@ namespace Tamagotchi.UI
             SetPassword();
             CreatePlayer();
             Screen next1 = new LoginScreen();
+            Thread.Sleep(500);
             next1.Show();
         }
         private void SetUserName()
@@ -59,6 +61,7 @@ namespace Tamagotchi.UI
             catch (Exception e)
             {
                 Console.WriteLine(e.Message);
+                lastname = Console.ReadLine();
             }
             Console.WriteLine("enter your gender");
             string gender = Console.ReadLine();

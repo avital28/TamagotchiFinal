@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,8 +21,7 @@ namespace Tamagotchi.UI._1
             Console.WriteLine("2- Last name: " + MainUi.p.Lastname);
             Console.WriteLine("3- Username: " + MainUi.p.Username);
             Console.WriteLine("4- Password " + MainUi.p.Password);
-            Console.WriteLine("5- Birthday: " + MainUi.p.Birthday);
-            Console.WriteLine("6- Gender: " + gender[0].ToString().ToUpper() + gender.Substring(1));
+            Console.WriteLine("5- Gender: " + gender[0].ToString().ToUpper() + gender.Substring(1));
             Console.WriteLine();
             Console.WriteLine();
             Console.WriteLine("Choose the number of the detail you would like to change");
@@ -65,10 +65,6 @@ namespace Tamagotchi.UI._1
                     MainUi.p.Password = newvalue;
                     break;
                 case 5:
-                    DateTime n = DateTime.Parse(newvalue);
-                    MainUi.p.Birthday = n;
-                    break;
-                case 6:
                     MainUi.p.Gender = newvalue;
                     break;
             }

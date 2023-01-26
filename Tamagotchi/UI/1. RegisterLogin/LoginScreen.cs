@@ -27,7 +27,9 @@ namespace Tamagotchi.UI
             while (MainUi.p == null)
             {
                 Console.WriteLine("Login failed, please try again");
+                Console.WriteLine("Please enter your username");
                 username = Console.ReadLine();
+                Console.WriteLine("Please enter your password");
                 password = Console.ReadLine();
                 MainUi.p = Data.Data.Login(username, password);
             }

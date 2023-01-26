@@ -10,7 +10,7 @@ namespace Tamagotchi.UI._5._AnimalMenu
 {
     public class ViewAnimalDetails: Screen
     {
-        public ViewAnimalDetails() : base("") { }
+        public ViewAnimalDetails() : base("View tamagotchi's details") { }
 
         public override void Show()
         {

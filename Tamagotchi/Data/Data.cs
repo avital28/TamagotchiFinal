@@ -47,6 +47,8 @@ namespace Tamagotchi.Data
             if (newplayer == null)
             {
                 playerlist.Add(P1);
+                Console.WriteLine("You have been succssesfuly registered");
+
             }
             else
             {
